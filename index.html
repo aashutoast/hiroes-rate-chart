@@ -20,6 +20,7 @@
         }
         .accordion {
             width: 100%;
+            max-width: 600px;
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
@@ -36,6 +37,10 @@
             padding: 15px;
             border-top: 1px solid #ddd;
         }
+        .category {
+            font-size: 18px;
+            font-weight: bold;
+        }
         .description {
             font-size: 14px;
             color: #666;
@@ -49,24 +54,40 @@
         .service {
             display: flex;
             gap: 20px;
-            background: #f0f0f0;
-            padding: 10px;
-            border-radius: 5px;
+        }
+        .iconblock {
+            width: 72px;
+            height: 72px;
+            background: grey;
+        }
+        .servicedetail {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .service-name {
+            font-size: 16px;
+        }
+        .service-charge {
+            font-size: 16px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="accordion">
-            <div class="accordion-header" onclick="toggleAccordion()">Air Conditioning & Heating</div>
-            <div class="accordion-content">
+            <div class="accordion-header" onclick="toggleAccordion()">
+                <div class="category">Air Conditioning & Heating</div>
                 <p class="description">HVAC technicians for installation, repair, and maintenance of heating and cooling systems.</p>
+            </div>
+            <div class="accordion-content">
                 <div class="grid">
                     <div class="service">
                       <div class="iconblock"></div>
                       <div class="servicedetail">
-                        <div>AC & Appliance Expert</div>
-                        <div><strong>₹99.00</strong></div>
+                        <div class="service-name">AC & Appliance Expert</div>
+                        <div class="service-charge">₹99.00</div>
                       </div>
                     </div>
                 </div>
